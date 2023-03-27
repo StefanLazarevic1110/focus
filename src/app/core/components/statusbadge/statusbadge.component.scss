@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 60px;
+  img {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .status-badge {
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .status-approved {
+    margin-top: 10px;
+    width: 92px;
+    height: 30px;
+    background-color: #5cb85c;
+  }
+
+  .status-progress {
+    margin-top: 10px;
+    width: 92px;
+    height: 30px;
+    background-color: #ffb017;
+  }
+
+  .status-rejected {
+    margin-top: 10px;
+    width: 92px;
+    height: 30px;
+    background-color: #ea4335;
+  }
+}

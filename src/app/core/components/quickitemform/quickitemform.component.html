@@ -1,0 +1,105 @@
+<div class="container" *ngIf="isOpen">
+  <div class="form-title">
+    <h1>Create Quick Item</h1>
+  </div>
+  <form
+    class="quick-item-form"
+    [formGroup]="quickItemForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="input-container">
+      <label>Item Title:</label>
+      <input class="text-input-item" type="text" formControlName="itemTitle" />
+    </div>
+
+    <div class="form-row">
+      <div class="input-container">
+        <label>Type:</label>
+        <input class="text-input" type="text" formControlName="type" />
+      </div>
+      <div class="input-container">
+        <label>Business Unit:</label>
+        <input class="text-input" type="text" formControlName="businessUnit" />
+      </div>
+    </div>
+    <div class="form-row-2">
+      <div class="input-container">
+        <label>Due Date:</label>
+        <input class="text-input" type="text" formControlName="dueDate" />
+      </div>
+      <div class="input-container">
+        <label>Priority:</label>
+        <input class="text-input" type="text" formControlName="priority" />
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <div class="job-title">
+        <h3>Job Title</h3>
+        <div class="input-radio">
+          <input
+            type="radio"
+            formControlName="jobTitle"
+            value="marketingCoordinator"
+          />
+          <label for="jobTitle">Marketing Coordinator</label>
+        </div>
+
+        <div class="input-radio">
+          <input type="radio" formControlName="jobTitle" value="webDesigner" />
+          <label for="jobTitle">Web Designer</label>
+        </div>
+
+        <div class="input-radio">
+          <input
+            type="radio"
+            formControlName="jobTitle"
+            value="presidentOfSales"
+          />
+          <label for="jobTitle">President of Sales</label>
+        </div>
+      </div>
+
+      <div class="languages">
+        <h3>Languages</h3>
+        <div class="input-checkbox">
+          <input type="checkbox" formControlName="spanish" />
+          <label for="spanish">Spanish</label>
+        </div>
+
+        <div class="input-checkbox">
+          <input type="checkbox" formControlName="chinese" />
+          <label for="spanish">Chinese</label>
+        </div>
+
+        <div class="input-checkbox">
+          <input type="checkbox" formControlName="arabic" />
+          <label for="spanish">Arabic</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label>Objective:</label>
+      <textarea
+        rows="3"
+        class="text-input"
+        type="text"
+        formControlName="objective"
+      ></textarea>
+    </div>
+
+    <div class="form-control-btns">
+      <button class="btn btn-outline-primary" (click)="onCancel()">
+        Cancel
+      </button>
+      <button
+        class="btn btn-outline-secondary"
+        type="submit"
+        [disabled]="!quickItemForm.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

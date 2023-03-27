@@ -1,0 +1,14 @@
+<div class="container" [style.width.px]="containerWidth">
+  <div
+    class="fill"
+    [style.width.px]="(containerWidth * percentage) / 100"
+    [ngClass]="{
+      'fill-red': percentage < 41,
+      'fill-orange': percentage > 40 && percentage < 61,
+      'fill-blue': percentage > 60 && percentage < 90,
+      'fill-green': percentage > 89
+    }"
+  >
+    {{ percentage }}%
+  </div>
+</div>

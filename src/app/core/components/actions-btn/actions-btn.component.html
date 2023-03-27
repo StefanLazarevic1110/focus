@@ -1,0 +1,20 @@
+<div class="container">
+  <h6>Waiting your Action</h6>
+  <div class="actions">
+    <ul class="data-row" *ngFor="let dataInstance of data">
+      <li class="img-num">
+        <img src="{{ dataInstance.images }}" alt="" />{{ dataInstance.number }}
+      </li>
+      <li class="textAction">{{ dataInstance.action }}</li>
+    </ul>
+  </div>
+  <div class="buttom">
+    <button class="btn btn-primary" (click)="openDialog()">+ Quick Item</button>
+    <dialog #dialog>
+      <app-quickitemform
+        [isOpen]="dialogIsOpen"
+        (onClose)="onCloseDialog()"
+      ></app-quickitemform>
+    </dialog>
+  </div>
+</div>

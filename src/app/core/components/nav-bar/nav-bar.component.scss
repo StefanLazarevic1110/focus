@@ -1,0 +1,98 @@
+.container {
+  .left-side {
+    .letter-f {
+      position: absolute;
+      width: 9.35px;
+      height: 12.42px;
+      left: 105px;
+      top: 19.23px;
+
+      filter: blur(0.5px);
+    }
+    .letter-o {
+      position: absolute;
+      width: 13.03px;
+      height: 12.85px;
+      left: 116.08px;
+      top: 19.02px;
+    }
+    .point {
+      position: absolute;
+      width: 3.52px;
+      height: 3.52px;
+      left: 120.79px;
+      top: 23.62px;
+    }
+    .letters-cus {
+      position: absolute;
+      width: 35.8px;
+      height: 12.87px;
+      left: 130.64px;
+      top: 19px;
+
+      filter: blur(0.5px);
+    }
+  }
+  .right-side {
+    .nav-ul {
+      list-style-type: none;
+      position: relative;
+
+      .ring {
+        position: absolute;
+        width: 16px;
+        height: 18px;
+        left: 1420px;
+        top: 5px;
+        display: block;
+      }
+
+      .sircle {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        left: 1428px;
+      }
+      p {
+        position: absolute;
+        width: 8.67px;
+        height: 11.56px;
+        left: 1433px;
+        top: 3px;
+        font-family: "Metropolis";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 9px;
+        color: #ffffff;
+      }
+      .drowdown {
+        li {
+          width: 300px;
+          .btn {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+        .ring {
+          color: #1495f0;
+        }
+        .sircle,
+        p {
+          display: none;
+        }
+        .drowdown {
+          position: absolute;
+          left: 1310px;
+          top: 22px;
+          li {
+            .btn {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
